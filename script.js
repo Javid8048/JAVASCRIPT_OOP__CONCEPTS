@@ -1,0 +1,1 @@
+document.documentElement.querySelector("head").querySelector("title").textContent = "JS OOP CONCEPT";
