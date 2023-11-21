@@ -1,28 +1,51 @@
 document.documentElement.querySelector("head").querySelector("title").textContent = "JS OOP CONCEPT";
 
-
 class Car {
-    constructor(name, speed) {
-        this._speed = speed;
-        this.name = name;
+    constructor() {
+
     }
-    get _speed() {
-        return `speed is ${this.speed / 1.6} mi/h`;
-    }
-    set _speed(spd) {
-        this.speed = spd;
-    }
-    get acceleration() {
-        this.speed += 10;
-        console.log(`${this.name} going on ${this.speed} Km/h`);
-    }
-    get brake() {
-        this.speed -= 5;
-        console.log(`${this.name} going on ${this.speed} Km/h`);
-    }
+    #h1 = document.querySelector("h1");
 }
-const bmw = new Car("Ford", 120)
-console.log(bmw._speed);
+
+const luftansa = {
+    flightname : 'luftanse',
+    ftcode: 'lft',
+    booking: [],
+    book(name, flightnum) {
+        console.log(`${name} booked a flight in ${this.flightname} number ${this.ftcode}${flightnum}`)
+        this.booking.push({name, flightnum});
+    }
+};
+luftansa.book('ashwaq', 987);
+const planebooking = luftansa.book.bind(luftansa,'alisha', 786);
+planebooking();
+planebooking();
+planebooking();
+
+
+
+// class Car {
+//     constructor(name, speed) {
+//         this._speed = speed;
+//         this.name = name;
+//     }
+//     get _speed() {
+//         return `speed is ${this.speed / 1.6} mi/h`;
+//     }
+//     set _speed(spd) {
+//         this.speed = spd;
+//     }
+//     get acceleration() {
+//         this.speed += 10;
+//         console.log(`${this.name} going on ${this.speed} Km/h`);
+//     }
+//     get brake() {
+//         this.speed -= 5;
+//         console.log(`${this.name} going on ${this.speed} Km/h`);
+//     }
+// }
+// const bmw = new Car("Ford", 120)
+// console.log(bmw._speed);
 
 
 // class PersonCl {
